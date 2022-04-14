@@ -1,4 +1,4 @@
-projecttemplatesbase: 
+projectTemplatesbase:
     getProjectTemplate: >-
         import com.asana.Client;
 
@@ -6,7 +6,7 @@ projecttemplatesbase:
         Client client = Client.accessToken("PERSONAL_ACCESS_TOKEN");
 
 
-        JsonElement result = client.projecttemplates.getProjectTemplate(projectTemplateGid)
+        JsonElement result = client.projectTemplates.getProjectTemplate(projectTemplateGid)
             .option("pretty", true)
             .execute();
     getProjectTemplates: >-
@@ -16,7 +16,7 @@ projecttemplatesbase:
         Client client = Client.accessToken("PERSONAL_ACCESS_TOKEN");
 
 
-        List<JsonElement> result = client.projecttemplates.getProjectTemplates(team, workspace)
+        List<JsonElement> result = client.projectTemplates.getProjectTemplates(team, workspace)
             .option("pretty", true)
             .execute();
     getProjectTemplatesForTeam: >-
@@ -26,7 +26,7 @@ projecttemplatesbase:
         Client client = Client.accessToken("PERSONAL_ACCESS_TOKEN");
 
 
-        List<JsonElement> result = client.projecttemplates.getProjectTemplatesForTeam(teamGid)
+        List<JsonElement> result = client.projectTemplates.getProjectTemplatesForTeam(teamGid)
             .option("pretty", true)
             .execute();
     instantiateProject: >-
@@ -36,7 +36,7 @@ projecttemplatesbase:
         Client client = Client.accessToken("PERSONAL_ACCESS_TOKEN");
 
 
-        Job result = client.projecttemplates.instantiateProject(projectTemplateGid)
+        Job result = client.projectTemplates.instantiateProject(projectTemplateGid)
             .data("field", "value")
             .data("field", "value")
             .option("pretty", true)

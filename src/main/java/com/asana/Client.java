@@ -68,6 +68,7 @@ public class Client {
     public UserTaskLists userTaskLists;
     public Webhooks webhooks;
     public Workspaces workspaces;
+    public ProjectTemplates projectTemplates;
 
     public boolean logAsanaChangeWarnings;
 
@@ -131,6 +132,7 @@ public class Client {
         this.userTaskLists = new UserTaskLists(this);
         this.webhooks = new Webhooks(this);
         this.workspaces = new Workspaces(this);
+        this.projectTemplates = new ProjectTemplates(this);
 
         this.logAsanaChangeWarnings = true;
     }
